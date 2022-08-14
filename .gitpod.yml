@@ -1,3 +1,6 @@
 tasks:
   - init: python --version
     command: python mail-automate.py $mail_password
+ports:
+  - port: 465
+    onOpen: open-preview    
