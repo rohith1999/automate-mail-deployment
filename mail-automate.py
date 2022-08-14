@@ -5,11 +5,12 @@ import imaplib
 import smtplib
 import ssl
 from email.message import EmailMessage
+import sys
 
 while True:
     
     EMAIL = 'rohithsuri3@gmail.com'
-    PASSWORD = ''
+    PASSWORD = sys.argv[1]
     SERVER = 'imap.gmail.com'
 
     # connect to the server and go to its inbox
@@ -92,7 +93,7 @@ while True:
                     # trigger a mail to deploy
             
                     email_sender = 'rohithsuri3@gmail.com'
-                    email_password = ''
+                    email_password = sys.argv[1]
                     email_receiver = 'rohithsuri77@gmail.com'
                     body = """please deploy"""
 
